@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<!-- JQuery links -->
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous">
+	 </script>
+
+	<!-- bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<!-- extrnal css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- fab icon -->
+	<link rel="icon" type="image/gif/png" href="assets/images/ps.png">
+</head>
+<body id="bods">
+
+	<div class="container-fluid">
+		<header class="row fixed-top">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<nav class="navbar bg-dark navbar-dark" id="navT">
+					<nav class="navbar-center">
+						<h3 id="actTitle">Survival DOOR | JavaScript</h3>
+					</nav>
+				</nav>
+			</div>
+		</header>
+	</div>
+
+	<div class="container-fluid" id="all">
+		<div class="row">
+
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<div class="invisibleDoor1 btn"></div>
+				<video id="videoDoor1">
+					  <source src="assets/videos/door2.mp4" type="video/mp4">
+			 	</video>
+			 	<h1 id="areYouReady">Are you ready to enter the world of survival?</h1>
+			 	<p id="instruction1">Click on the door to enter! I can help choose the right path if you correctly answer my riddles</p>
+
+
+			 	<h4 id="q1">The more you take, the more you leave behind. What am I?<br><input id="input1" type="text" name="input1"><br><button id="but1">Check Your Answer</button><br><span id="span1"></span></h4>
+
+			 	<div class="invisibleDoor2 btn"></div>
+			 	<video id="videoDoor2">
+					  <source src="assets/videos/door3.mp4" type="video/mp4">
+			 	</video>
+
+			 	<div class="invisibleDoor2-1 btn"></div>
+			 	<video id="videoDoor2-1">
+					  <source src="assets/videos/gameOver1.mp4" type="video/mp4">
+			 	</video>
+
+			 	<div class="invisibleDoor3 btn"></div>
+			 	<video id="videoDoor3">
+					  <source src="assets/videos/door4.mp4" type="video/mp4">
+			 	</video>
+
+			 	<div class="invisibleDoor4 btn"></div>
+			 	<video id="videoDoor4">
+					  <source src="assets/videos/door8.mp4" type="video/mp4">
+			 	</video>
+
+			 	<div class="invisibleDoor5 btn"></div>
+			 	<video id="videoDoor5">
+					  <source src="assets/videos/door7.mp4" type="video/mp4">
+			 	</video>
+
+			 	<div class="invisibleDoor6 btn"></div>
+			 	<video id="videoDoor6">
+					  <source src="assets/videos/door1.mp4" type="video/mp4">
+			 	</video>
+
+			 	<div class="gameOver">
+			 		<video id="gameOver1">
+			 			<source src="assets/videos/gameOver1.mp4" type="">
+			 		</video>
+			 	</div>
+
+
+
+
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<div class="container-fluid">
+		<footer class="row fixed-bottom">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<nav class="navbar bg-dark navbar-dark" id="navB">
+					<nav class="navbar-center" id="foot">
+						<h5>Disclaimer</h5>
+						<p id="disclaimer">This game is created for educational-project only. Not for sale</p>
+						<h3 id="myName">Marc Vincent Reyes &copy;</h3>
+					</nav>
+				</nav>
+			</div>
+			
+		</footer>
+	</div>
+
+
+
+	<script type="text/javascript">
+		// navbar header and footer
+
+		$("h3").css({
+    		"color":"white"
+		});
+
+		$("h5").css({
+    		"color":"white"
+		});
+
+
+		$("#disclaimer").css("color","white")
+
+
+		// $("body").css({
+		// 	"backgroundColor":"black",
+		// })
+
+	</script>
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			//element manipulation
+
+			//stage 1
+
+		// function checkAnswer(){
+
+		// var x = document.getElementById('input1').value.toLowerCase();
+		// // var y = x.toLowerCase();
+		// switch(x){
+		// 	case "footstep":
+		// 		$(".invisibleDoor2").css( "zIndex", "20" );
+		// 		break;
+		// 	case "footsteps":
+		// 		$(".invisibleDoor2").css( "zIndex", "20" );
+		// 		break;
+			
+		// 	default:
+		// 		$(".invisibleDoor2").css( "zIndex", "1" );
+		// 	}
+		// }
+
+
+			
+			$("#but1").click(function({
+				$x = $("#input1").val().toLowerCase()
+				switch(x){
+					case "footsteps":
+						$(".invisibleDoor2").css( "zIndex", 20 );
+						break;
+					case "footstep":
+						$(".invisibleDoor2").css( "zIndex", 20 );
+						break;
+					default:
+						$(".invisibleDoor2").css( "zIndex", 1 );
+				}
+			})
+
+			$(".invisibleDoor1").click(function(){
+				$(".invisibleDoor1").hide();
+				$("#areYouReady").hide();
+				$("#instruction1").hide();
+
+				$("#bods").css("background","none");
+				$("#bods").css("backgroundColor","black");
+				$("#videoDoor1").show();
+				$("#videoDoor1")[0].play();
+
+
+				function delayMe(){
+					$("#videoDoor1").hide();
+
+					$("#bods").css({
+						"background":"url(assets/images/door2.jpg)",
+						"background-size":"cover",
+						"background-repeat":"no-repeat"});
+					$(".invisibleDoor2").show();
+					$(".invisibleDoor2-1").show();
+					$(".invisibleDoor3").show();
+				}
+				setTimeout(delayMe, 6500);
+
+			}); //end of stage 1
+
+
+			//stage 2
+
+
+
+
+			$(".invisibleDoor2").click(function(){
+				$(".invisibleDoor2").hide();
+				$(".invisibleDoor2-1").hide();
+				$(".invisibleDoor3").hide();
+				$("#bods").css("background","none");
+				$("#bods").css("backgroundColor","black");
+				$("#videoDoor2").show();
+				$("#videoDoor2")[0].play();
+
+				function delayMe(){
+					$("#videoDoor2").hide();
+
+					$("#bods").css({
+						"background":"url(assets/images/door3.jpg)",
+						"background-size":"cover",
+						"background-repeat":"no-repeat"});
+					$(".invisibleDoor4").show();
+					$(".invisibleDoor5").show();
+					$(".invisibleDoor6").show();
+				}
+				setTimeout(delayMe, 3000);
+
+			}); 
+
+
+			//gameOver
+			$(".invisibleDoor2-1").click(function(){
+				$(".invisibleDoor2").hide();
+				$(".invisibleDoor2-1").hide();
+				$(".invisibleDoor3").hide();
+				$("#bods").css("background","none");
+				$("#bods").css("backgroundColor","black");
+				$("#videoDoor2").show();
+				$("#videoDoor2")[0].play();
+
+				function delayMe(){
+					$("#videoDoor2").hide();
+					$("#gameOver1").show();
+					$("#gameOver1")[0].play();
+
+					// $("#bods").css({
+					// 	"background":"url(assets/images/door3.jpg)",
+					// 	"background-size":"cover",
+					// 	"background-repeat":"no-repeat"});
+					// $(".invisibleDoor4").show();
+					// $(".invisibleDoor5").show();
+					// $(".invisibleDoor6").show();
+				}
+				setTimeout(delayMe, 3000);
+
+			}); 
+
+
+			//gameOver
+			$(".invisibleDoor3").click(function(){
+				$(".invisibleDoor2").hide();
+				$(".invisibleDoor2-1").hide();
+				$(".invisibleDoor3").hide();
+				$("#bods").css("background","none");
+				$("#bods").css("backgroundColor","black");
+				$("#videoDoor3").show();
+				$("#videoDoor3")[0].play();
+
+				function delayMe(){
+					$("#videoDoor3").hide();
+					$("#gameOver1").show();
+					$("#gameOver1")[0].play();
+
+					// $("#bods").css({
+					// 	"background":"url(assets/images/door3.jpg)",
+					// 	"background-size":"cover",
+					// 	"background-repeat":"no-repeat"});
+					// $(".invisibleDoor4").show();
+					// $(".invisibleDoor5").show();
+					// $(".invisibleDoor6").show();
+				}
+				setTimeout(delayMe, 7100);
+
+			}); //end of stage 2
+
+
+			//stage 3
+			$(".invisibleDoor4").click(function(){
+				$(".invisibleDoor4").hide();
+				$(".invisibleDoor5").hide();
+				$(".invisibleDoor6").hide();
+				$("#bods").css("background","none");
+				$("#bods").css("backgroundColor","black");
+				$("#videoDoor4").show();
+				$("#videoDoor4")[0].play();
+
+				function delayMe(){
+					$("#videoDoor4").hide();
+
+					$("#bods").css({
+						"background":"url(assets/images/wideNarrow.jpg)",
+						"background-size":"cover",
+						"background-repeat":"no-repeat"});
+					//$(".invisibleDoor4").show();
+					//$(".invisibleDoor5").show();
+				}
+				setTimeout(delayMe, 7200);
+			}); 
+
+			$(".invisibleDoor5").click(function(){
+				$(".invisibleDoor4").hide();
+				$(".invisibleDoor5").hide();
+				$(".invisibleDoor6").hide();
+				$("#bods").css("background","none");
+				$("#bods").css("backgroundColor","black");
+				$("#videoDoor5").show();
+				$("#videoDoor5")[0].play();
+
+				function delayMe(){
+					$("#videoDoor5").hide();
+
+					$("#bods").css({
+						"background":"url(assets/images/wideNarrow.jpg)",
+						"background-size":"cover",
+						"background-repeat":"no-repeat"});
+					//$(".invisibleDoor4").show();
+					//$(".invisibleDoor5").show();
+				}
+				setTimeout(delayMe, 7200);
+			});
+
+			$(".invisibleDoor6").click(function(){
+				$(".invisibleDoor4").hide();
+				$(".invisibleDoor5").hide();
+				$(".invisibleDoor6").hide();
+				$("#bods").css("background","none");
+				$("#bods").css("backgroundColor","black");
+				$("#videoDoor6").show();
+				$("#videoDoor6")[0].play();
+
+				function delayMe(){
+					$("#videoDoor6").hide();
+
+					$("#bods").css({
+						"background":"url(assets/images/wideNarrow.jpg)",
+						"background-size":"cover",
+						"background-repeat":"no-repeat"});
+					//$(".invisibleDoor4").show();
+					//$(".invisibleDoor5").show();
+				}
+				setTimeout(delayMe, 7200);
+			}); //end of stage 3
+
+		}); //end of ready function
+
+	</script>
+
+
+
+
+	<script type="text/javascript">
+		
+
+		
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- external custom js -->
+
+
+
+	<!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <!-- external bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>
