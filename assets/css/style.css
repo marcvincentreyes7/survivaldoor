@@ -213,6 +213,18 @@
     width: 256px;
     /*background-color: red;*/
     display: none;
+    z-index: 10;
+}
+
+.invisibleDoor5-1{
+    position: absolute;
+    margin-top: 23%;
+    margin-left: 40%;
+    height: 381px;
+    width: 256px;
+    /*background-color: red;*/
+    display: none;
+    z-index: 1;
 }
 
 
@@ -241,6 +253,44 @@
     top: 0;
     left: 0;
     width: 100%; 
+    display: none;
+}
+
+
+.invisibleDoor7{
+    position: absolute;
+    margin-top: 19%;
+    margin-left: 15%;
+    height: 556px;
+    width: 385px;
+    /*background-color: red;*/
+     display: none; 
+}
+
+#videoDoor7{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    display: none;
+}
+
+
+.invisibleDoor8 {
+    position: absolute;
+    margin-top: 19%;
+    margin-left: 49%;
+    height: 550px;
+    width: 162px;
+    /*background-color: blue;*/
+     display: none; 
+}
+
+#videoDoor8{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
 	display: none;
 }
 
@@ -254,34 +304,29 @@
 }
 
 
-
-
-
-
-/*#areYouReady{
-    font-family: "re.ttf";
-    position: absolute;
-    width: 39%;
-    left: 41%;
-    margin-top: 2%;
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    font-size: 240%;
+#tada{
+    height: 0px;
+    width: 0px;
+    display: none;
 }
-
-#instruction1{
-    position: absolute;
-    margin-left: 32%;
-    margin-top: 30%;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-}*/
 
 
 
 #q1{
+    position: absolute;
+    margin-top: 11%;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(200,30,30,0.8);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 5px;
+    display: none;
+}
+
+
+#q2{
     position: absolute;
     margin-top: 11%;
     margin-left: 50%;
