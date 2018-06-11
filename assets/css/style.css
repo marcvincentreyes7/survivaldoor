@@ -2,25 +2,49 @@
 
 }
 
-.portraitMsg{
+#portraitMsg{
+    position: absolute;
+    display: block;
+    font-size: 60px;
+    color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     display: none;
+}
+
+#noSignal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+#sec{
+    max-width: 1920px;
+    min-width: 480px;
+    max-height: 1080px;
+    min-height: 320px;
 }
 
 .navbar-center {
     position: absolute;
+    width: 100%;
     left: 50%;
-    transform: translatex(-50%);
+    transform: translate(-50%);
 }
 
 #navT {
-	height: 50px;
+	height: 40px;
+    text-align: center;
 }
 
 #navB {
 	padding-top: 20px;
-	height: 70px;
+	height: 30px;
 	text-align: center;
-	line-height: 1px;
 }
 
 
@@ -31,19 +55,37 @@
 }
 
 #myName {
+    position: relative;
 	font-family: "re.ttf";
-	margin-top: -8px;
+    color: white;
+    font-size: 30px;
+    top: 5px;
+    margin-left: 18%;
+
+}
+
+#disclaimer2{
+    font-size: 15px;
+    color: white;
+}
+
+#disclaimer1{
+    /*font-size: 15px;*/
+    color: white;
 }
 
 #actTitle {
 	margin-top: 20px;
+    color: white;
 	font-family: "re.ttf";
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: red;
 }
 
 
 
 #bods {
-	background: url(../images/door1.jpg) no-repeat center fixed;
+	background: url(../images/frontPage.jpg) no-repeat center fixed;
 	background-size: cover;
 }
 
@@ -56,16 +98,26 @@
 
 .invisibleDoor1{
 
-    height: 400px;
+    max-height: 400px;
+    min-height: 270px;
     width: 222px;
+    min-width: 111px;
     /*background-color: red;*/
     position: absolute;
     margin-top: 17%;
     margin-left: 15%;
 }
 
+/*video {
+    min-width: 100%; 
+    min-height: 100%;
+}*/
+
 #videoDoor1{
-	width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
 	display: none;
 }
 
@@ -94,18 +146,25 @@
 
 
 #videoDoor2{
-	width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
 	display: none;
 }
 
 #videoDoor2-1{
-	width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
 	display: none;
 }
 
 
 .invisibleDoor3 {
-	height: 561px;
+	max-height: 561px;
+    min-height: 270px;
     width: 308px;
     /*background-color: red;*/
     position: absolute;
@@ -117,7 +176,10 @@
 
 
 #videoDoor3{
-	width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
 	display: none;
 }
 
@@ -135,7 +197,10 @@
 
 
 #videoDoor4{
-	width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
 	display: none;
 }
 
@@ -152,7 +217,10 @@
 
 
 #videoDoor5{
-	width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
 	display: none;
 }
 
@@ -169,13 +237,19 @@
 
 
 #videoDoor6{
-	width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
 	display: none;
 }
 
 
 #gameOver1{
-	width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
 	display: none;
 }
 
@@ -184,18 +258,16 @@
 
 
 
-#areYouReady{
+/*#areYouReady{
     font-family: "re.ttf";
     position: absolute;
-    width: 90%;
-    margin-left: 50%;
-    margin-top: 79px;
+    width: 39%;
+    left: 41%;
+    margin-top: 2%;
     color: black;
-    transform: translate(-50%);
     font-weight: bold;
-    /* background-color: white; */
     text-align: center;
-    font-size: 290%;
+    font-size: 240%;
 }
 
 #instruction1{
@@ -205,7 +277,7 @@
     color: black;
     font-size: 20px;
     font-weight: bold;
-}
+}*/
 
 
 
@@ -234,58 +306,23 @@
 */
 
 /* Portrait */
-@media screen and (device-width: 360px) {
-  /*or (device-height: 640px) */
-  /*and (-webkit-device-pixel-ratio: 4) */
-  /*and (orientation: portrait) {*/
-
+@media only screen and (orientation: portrait)  {
     section {
         display: none;
     }
 
     #bods{
-        background: url(../images/noSignal.gif) no-repeat center fixed;
-        background-size: cover;
         text-align: center;
     }
 
     #portraitMsg{
-        position: absolute;
         display: block;
-        font-size: 60px;
-        color: white;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
+    }
+    #noSignal{
+        display: block;
     }
 }
 
 
 
 
-
-@media screen and (device-width: 320px) {
-  /*or (device-height: 640px) */
-  /*and (-webkit-device-pixel-ratio: 4) */
-  /*and (orientation: portrait) {*/
-
-    section {
-        display: none;
-    }
-
-    #bods{
-        background: url(../images/noSignal.gif) no-repeat center fixed;
-        background-size: cover;
-        text-align: center;
-    }
-
-    #portraitMsg{
-        position: absolute;
-        display: block;
-        font-size: 60px;
-        color: white;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-}

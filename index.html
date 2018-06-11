@@ -20,6 +20,7 @@
 	<link rel="icon" type="image/gif/png" href="assets/images/ps.png">
 </head>
 <body id="bods">
+	<img id="noSignal" src="assets/images/noSignal.gif">
 	<p id="portraitMsg">Please turn your device to lanscape mode</p>
 	<section id="sec">
 
@@ -43,8 +44,8 @@
 					<video id="videoDoor1">
 						  <source src="assets/videos/door2.mp4" type="video/mp4">
 				 	</video>
-				 	<h1 id="areYouReady">Are you ready to enter the world of survival?</h1>
-				 	<p id="instruction1">Click on the door to enter! I can help choose the right path if you correctly answer my riddles</p>
+				 	<!-- <h1 id="areYouReady">Are you ready to enter the world of survival?</h1>
+				 	<p id="instruction1">Click on the door to enter! I can help choose the right path if you correctly answer my riddles</p> -->
 
 
 				 	<h4 id="q1">The more you take, the more you leave behind. What am I?<br><input id="input1" type="text" name="input1"><br><button id="but1" onclick="check()">Check Your Answer</button><br><span id="span1">You only have 3 chance to guess the correct answer!</span></h4>
@@ -118,39 +119,15 @@
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 					<nav class="navbar bg-dark navbar-dark" id="navB">
 						<nav class="navbar-center" id="foot">
-							<h5>Disclaimer</h5>
-							<p id="disclaimer">This game is created for educational-project only. Not for sale</p>
-							<h3 id="myName">Marc Vincent Reyes &copy;</h3>
+							<h5 id="disclaimer1">Disclaimer: <span id="disclaimer2">This game is created for educational-project only. Not for sale</span><span id="myName">Marc Vincent Reyes &copy;</span></h5>
+							<p </p>
+							<h3 </h3>
 						</nav>
 					</nav>
 				</div>
 				
 			</footer>
 		</div>
-
-
-
-
-		<script type="text/javascript">
-			// navbar header and footer
-
-			$("h3").css({
-	    		"color":"white"
-			});
-
-			$("h5").css({
-	    		"color":"white"
-			});
-
-
-			$("#disclaimer").css("color","white")
-
-
-			// $("body").css({
-			// 	"backgroundColor":"black",
-			// })
-
-		</script>
 
 
 
@@ -164,7 +141,7 @@
 						$(".invisibleDoor2-1").css( "zIndex", "20" );
 						$("#span1").html("Congratulation! your Answer is correct. Please choose the RIGHT door! I'll make it safe now");
 						$("#input1").attr("disabled", true);
-						$("#input1").css("backgroundColor", "lightgrey");
+						$("#input1").css("backgroundColor", "lightgreen");
 						$("#but1").attr("disabled", true);
 					}else {
 						attempts--;
@@ -196,8 +173,6 @@
 
 				$(".invisibleDoor1").click(function(){
 					$(".invisibleDoor1").hide();
-					$("#areYouReady").hide();
-					$("#instruction1").hide();
 
 					$("#bods").css("background","none");
 					$("#bods").css("backgroundColor","black");
@@ -211,6 +186,7 @@
 						$("#bods").css({
 							"background":"url(assets/images/door2.jpg)",
 							"background-size":"cover",
+							"background-attachment":"fixed",
 							"background-repeat":"no-repeat"});
 						$("#q1").show();
 						$(".invisibleDoor2").show();
@@ -246,7 +222,7 @@
 				}); 
 
 
-				//correct Door
+				//safe Door
 				$(".invisibleDoor2-1").click(function(){
 					$("#q1").hide();
 					$(".invisibleDoor2").hide();
@@ -372,16 +348,6 @@
 			}); //end of ready function
 
 		</script>
-
-
-
-
-		<script type="text/javascript">
-			
-
-			
-		</script>
-
 
 
 
