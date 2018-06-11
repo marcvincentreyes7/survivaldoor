@@ -21,6 +21,7 @@
 </head>
 <body id="bods">
 	<img id="noSignal" src="assets/images/noSignal.gif">
+<!-- 	<img id="bodsImg" src="assets/images/frontPage.jpg"> -->
 	<p id="portraitMsg">Please turn your device to lanscape mode</p>
 	<section id="sec">
 
@@ -36,6 +37,11 @@
 			</header>
 		</div>
 
+
+		<h4 id="q1">The more you take, the more you leave behind. What am I?<br><input id="input1" type="text" name="input1"><br><button id="but1" onclick="check()">Check Your Answer</button><br><span id="span1">You only have 3 chance to guess the correct answer!</span></h4>
+
+		<h4 id="q2">Re-arrange the letters <span style="color: blue; font-weight: bold;">O O U S W T D N E J R </span>to spell just one word.<br><input id="input2" type="text" name="input2"><br><button id="but2" onclick="check2()">Check Your Answer</button><br><span id="span2">You only have 3 chance to guess the correct answer!</span></h4>
+
 		<div class="container-fluid" id="all">
 			<div class="row">
 
@@ -44,13 +50,9 @@
 					<video id="videoDoor1">
 						  <source src="assets/videos/door2.mp4" type="video/mp4">
 				 	</video>
-				 	<!-- <h1 id="areYouReady">Are you ready to enter the world of survival?</h1>
-				 	<p id="instruction1">Click on the door to enter! I can help choose the right path if you correctly answer my riddles</p> -->
 
 
-				 	<h4 id="q1">The more you take, the more you leave behind. What am I?<br><input id="input1" type="text" name="input1"><br><button id="but1" onclick="check()">Check Your Answer</button><br><span id="span1">You only have 3 chance to guess the correct answer!</span></h4>
-
-				 	<h4 id="q2">Re-arrange the letters <span style="color: blue; font-weight: bold;">O O U S W T D N E J R </span>to spell just one word.<br><input id="input2" type="text" name="input2"><br><button id="but2" onclick="check2()">Check Your Answer</button><br><span id="span2">You only have 3 chance to guess the correct answer!</span></h4>
+				 	
 
 				 	<div class="invisibleDoor2 btn"></div>
 				 	<video id="videoDoor2">
@@ -92,13 +94,13 @@
 
 				 	<div class="gameOver">
 				 		<video id="gameOver1">
-				 			<source src="assets/videos/gameOver1.mp4" type="">
+				 			<source src="assets/videos/gameOver.mp4" type="">
 				 		</video>
 				 	</div>
 
 				 	<div class="tada">
-				 		<video id="tada">
-				 			<source src="assets/videos/tada.mp4" type="">
+				 		<video id="tadah">
+				 			<source src="assets/videos/tadah.mp4" type="">
 				 		</video>
 				 	</div>
 
@@ -156,12 +158,13 @@
 			function check(){
 					var x = document.getElementById("input1").value.toLowerCase();
 					
-					if(x=="footstep" || x=="footsteps") {
+					if(x=="footstep" || x=="footsteps" || x=="footprint" || x=="footprints") {
 						$(".invisibleDoor2-1").css( "zIndex", "20" );
 						$("#span1").html("Congratulation! your Answer is correct. Please choose the RIGHT door! I'll make it safe now");
 						$("#input1").attr("disabled", true);
 						$("#input1").css("backgroundColor", "lightgreen");
 						$("#but1").attr("disabled", true);
+						
 					}else {
 						attempts--;
 						if(attempts==0){
@@ -172,9 +175,10 @@
 							} else {
 							
 								$("#span1").html("Opps! your answer is incorrect! You only have "+attempts+" more chance. If you lose your chance, You have no chance to survive");
-							}
+
 						}
 					}	//end of function check()
+				}
 
 
 					//q2
@@ -204,7 +208,7 @@
 
 
 
-			$(document).ready(function () {
+			//$(document).ready(function () {
 
 				//element manipulation
 
@@ -232,7 +236,7 @@
 						$(".invisibleDoor2-1").show();
 						$(".invisibleDoor3").show();
 					}
-					setTimeout(delayMe, 6500);
+					setTimeout(delayMe, 6700);
 
 				}); //end of stage 1
 
@@ -462,8 +466,8 @@
 
 					function delayMe(){
 						$("#videoDoor8").hide();
-						$("#tada").show();
-						$("#tada")[0].play();
+						$("#tadah").show();
+						$("#tadah")[0].play();
 
 
 						$("#bods").css({
@@ -476,7 +480,7 @@
 					setTimeout(delayMe, 6800);
 				}); //end of stage 4
 
-			}); //end of ready function
+			//}); //end of ready function
 
 		</script>
 
