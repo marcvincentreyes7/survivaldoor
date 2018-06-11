@@ -85,9 +85,11 @@
 
 
 #bods {
+
 	background: url(../images/frontPage.jpg) no-repeat center fixed;
 	background-size: cover;
 }
+
 
 
 #foot{
@@ -304,7 +306,7 @@
 }
 
 
-#tada{
+#tadah{
     height: 0px;
     width: 0px;
     display: none;
@@ -314,9 +316,10 @@
 
 #q1{
     position: absolute;
-    margin-top: 11%;
-    margin-left: 50%;
-    transform: translate(-50%,-50%);
+    margin-top: 50px;
+    width: 100%;
+    /*margin-left: 50%;*/
+    /*transform: translate(-50%,-50%);*/
     background-color: rgba(200,30,30,0.8);
     color: white;
     font-size: 25px;
@@ -328,9 +331,10 @@
 
 #q2{
     position: absolute;
-    margin-top: 11%;
-    margin-left: 50%;
-    transform: translate(-50%,-50%);
+    margin-top: 50px;
+    width: 100%;
+    /*margin-left: 50%;*/
+    /*transform: translate(-50%,-50%);*/
     background-color: rgba(200,30,30,0.8);
     color: white;
     font-size: 25px;
