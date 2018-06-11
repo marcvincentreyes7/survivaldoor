@@ -20,387 +20,367 @@
 	<link rel="icon" type="image/gif/png" href="assets/images/ps.png">
 </head>
 <body id="bods">
+	<p id="portraitMsg">Please turn your device to lanscape mode</p>
+	<section id="sec">
 
-	<div class="container-fluid">
-		<header class="row fixed-top">
-			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<nav class="navbar bg-dark navbar-dark" id="navT">
-					<nav class="navbar-center">
-						<h3 id="actTitle">Survival DOOR | JavaScript</h3>
+		<div class="container-fluid">
+			<header class="row fixed-top">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<nav class="navbar bg-dark navbar-dark" id="navT">
+						<nav class="navbar-center">
+							<h3 id="actTitle">Survival DOOR | JavaScript</h3>
+						</nav>
 					</nav>
-				</nav>
-			</div>
-		</header>
-	</div>
-
-	<div class="container-fluid" id="all">
-		<div class="row">
-
-			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<div class="invisibleDoor1 btn"></div>
-				<video id="videoDoor1">
-					  <source src="assets/videos/door2.mp4" type="video/mp4">
-			 	</video>
-			 	<h1 id="areYouReady">Are you ready to enter the world of survival?</h1>
-			 	<p id="instruction1">Click on the door to enter! I can help choose the right path if you correctly answer my riddles</p>
-
-
-			 	<h4 id="q1">The more you take, the more you leave behind. What am I?<br><input id="input1" type="text" name="input1"><br><button id="but1">Check Your Answer</button><br><span id="span1"></span></h4>
-
-			 	<div class="invisibleDoor2 btn"></div>
-			 	<video id="videoDoor2">
-					  <source src="assets/videos/door3.mp4" type="video/mp4">
-			 	</video>
-
-			 	<div class="invisibleDoor2-1 btn"></div>
-			 	<video id="videoDoor2-1">
-					  <source src="assets/videos/gameOver1.mp4" type="video/mp4">
-			 	</video>
-
-			 	<div class="invisibleDoor3 btn"></div>
-			 	<video id="videoDoor3">
-					  <source src="assets/videos/door4.mp4" type="video/mp4">
-			 	</video>
-
-			 	<div class="invisibleDoor4 btn"></div>
-			 	<video id="videoDoor4">
-					  <source src="assets/videos/door8.mp4" type="video/mp4">
-			 	</video>
-
-			 	<div class="invisibleDoor5 btn"></div>
-			 	<video id="videoDoor5">
-					  <source src="assets/videos/door7.mp4" type="video/mp4">
-			 	</video>
-
-			 	<div class="invisibleDoor6 btn"></div>
-			 	<video id="videoDoor6">
-					  <source src="assets/videos/door1.mp4" type="video/mp4">
-			 	</video>
-
-			 	<div class="gameOver">
-			 		<video id="gameOver1">
-			 			<source src="assets/videos/gameOver1.mp4" type="">
-			 		</video>
-			 	</div>
-
-
-
-
-
-			</div>
-
+				</div>
+			</header>
 		</div>
-	</div>
+
+		<div class="container-fluid" id="all">
+			<div class="row">
+
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<div class="invisibleDoor1 btn"></div>
+					<video id="videoDoor1">
+						  <source src="assets/videos/door2.mp4" type="video/mp4">
+				 	</video>
+				 	<h1 id="areYouReady">Are you ready to enter the world of survival?</h1>
+				 	<p id="instruction1">Click on the door to enter! I can help choose the right path if you correctly answer my riddles</p>
+
+
+				 	<h4 id="q1">The more you take, the more you leave behind. What am I?<br><input id="input1" type="text" name="input1"><br><button id="but1" onclick="check()">Check Your Answer</button><br><span id="span1">You only have 3 chance to guess the correct answer!</span></h4>
+
+				 	<div class="invisibleDoor2 btn"></div>
+				 	<video id="videoDoor2">
+						  <source src="assets/videos/door3.mp4" type="video/mp4">
+				 	</video>
+
+				 	<div class="invisibleDoor2-1 btn"></div>
+				 	<video id="videoDoor2-1">
+						  <source src="assets/videos/gameOver1.mp4" type="video/mp4">
+				 	</video>
+
+				 	<div class="invisibleDoor3 btn"></div>
+				 	<video id="videoDoor3">
+						  <source src="assets/videos/door4.mp4" type="video/mp4">
+				 	</video>
+
+				 	<div class="invisibleDoor4 btn"></div>
+				 	<video id="videoDoor4">
+						  <source src="assets/videos/door8.mp4" type="video/mp4">
+				 	</video>
+
+				 	<div class="invisibleDoor5 btn"></div>
+				 	<video id="videoDoor5">
+						  <source src="assets/videos/door7.mp4" type="video/mp4">
+				 	</video>
+
+				 	<div class="invisibleDoor6 btn"></div>
+				 	<video id="videoDoor6">
+						  <source src="assets/videos/door1.mp4" type="video/mp4">
+				 	</video>
+
+				 	<div class="gameOver">
+				 		<video id="gameOver1">
+				 			<source src="assets/videos/gameOver1.mp4" type="">
+				 		</video>
+				 	</div>
 
 
 
 
 
+				</div>
 
-
-
-
-
-	<div class="container-fluid">
-		<footer class="row fixed-bottom">
-			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<nav class="navbar bg-dark navbar-dark" id="navB">
-					<nav class="navbar-center" id="foot">
-						<h5>Disclaimer</h5>
-						<p id="disclaimer">This game is created for educational-project only. Not for sale</p>
-						<h3 id="myName">Marc Vincent Reyes &copy;</h3>
-					</nav>
-				</nav>
 			</div>
-			
-		</footer>
-	</div>
+		</div>
 
 
 
-	<script type="text/javascript">
-		// navbar header and footer
+			<script type="text/javascript">
+				// function check(){
+				// 	var x = document.getElementById("input1").value.toLowerCase();
+				// 	if(x==1) {
+				// 		alert("yes");
+				// 	}else{
+				// 		alert("no");
+				// 	}
 
-		$("h3").css({
-    		"color":"white"
-		});
-
-		$("h5").css({
-    		"color":"white"
-		});
-
-
-		$("#disclaimer").css("color","white")
-
-
-		// $("body").css({
-		// 	"backgroundColor":"black",
-		// })
-
-	</script>
-
-
-
-	<script type="text/javascript">
-		$(document).ready(function () {
-
-			//element manipulation
-
-			//stage 1
-
-		// function checkAnswer(){
-
-		// var x = document.getElementById('input1').value.toLowerCase();
-		// // var y = x.toLowerCase();
-		// switch(x){
-		// 	case "footstep":
-		// 		$(".invisibleDoor2").css( "zIndex", "20" );
-		// 		break;
-		// 	case "footsteps":
-		// 		$(".invisibleDoor2").css( "zIndex", "20" );
-		// 		break;
-			
-		// 	default:
-		// 		$(".invisibleDoor2").css( "zIndex", "1" );
-		// 	}
-		// }
-
-
-			
-			$("#but1").click(function({
-				$x = $("#input1").val().toLowerCase()
-				switch(x){
-					case "footsteps":
-						$(".invisibleDoor2").css( "zIndex", 20 );
-						break;
-					case "footstep":
-						$(".invisibleDoor2").css( "zIndex", 20 );
-						break;
-					default:
-						$(".invisibleDoor2").css( "zIndex", 1 );
-				}
-			})
-
-			$(".invisibleDoor1").click(function(){
-				$(".invisibleDoor1").hide();
-				$("#areYouReady").hide();
-				$("#instruction1").hide();
-
-				$("#bods").css("background","none");
-				$("#bods").css("backgroundColor","black");
-				$("#videoDoor1").show();
-				$("#videoDoor1")[0].play();
-
-
-				function delayMe(){
-					$("#videoDoor1").hide();
-
-					$("#bods").css({
-						"background":"url(assets/images/door2.jpg)",
-						"background-size":"cover",
-						"background-repeat":"no-repeat"});
-					$(".invisibleDoor2").show();
-					$(".invisibleDoor2-1").show();
-					$(".invisibleDoor3").show();
-				}
-				setTimeout(delayMe, 6500);
-
-			}); //end of stage 1
-
-
-			//stage 2
+				// }
+			</script>
 
 
 
 
-			$(".invisibleDoor2").click(function(){
-				$(".invisibleDoor2").hide();
-				$(".invisibleDoor2-1").hide();
-				$(".invisibleDoor3").hide();
-				$("#bods").css("background","none");
-				$("#bods").css("backgroundColor","black");
-				$("#videoDoor2").show();
-				$("#videoDoor2")[0].play();
-
-				function delayMe(){
-					$("#videoDoor2").hide();
-
-					$("#bods").css({
-						"background":"url(assets/images/door3.jpg)",
-						"background-size":"cover",
-						"background-repeat":"no-repeat"});
-					$(".invisibleDoor4").show();
-					$(".invisibleDoor5").show();
-					$(".invisibleDoor6").show();
-				}
-				setTimeout(delayMe, 3000);
-
-			}); 
 
 
-			//gameOver
-			$(".invisibleDoor2-1").click(function(){
-				$(".invisibleDoor2").hide();
-				$(".invisibleDoor2-1").hide();
-				$(".invisibleDoor3").hide();
-				$("#bods").css("background","none");
-				$("#bods").css("backgroundColor","black");
-				$("#videoDoor2").show();
-				$("#videoDoor2")[0].play();
-
-				function delayMe(){
-					$("#videoDoor2").hide();
-					$("#gameOver1").show();
-					$("#gameOver1")[0].play();
-
-					// $("#bods").css({
-					// 	"background":"url(assets/images/door3.jpg)",
-					// 	"background-size":"cover",
-					// 	"background-repeat":"no-repeat"});
-					// $(".invisibleDoor4").show();
-					// $(".invisibleDoor5").show();
-					// $(".invisibleDoor6").show();
-				}
-				setTimeout(delayMe, 3000);
-
-			}); 
+		<div class="container-fluid">
+			<footer class="row fixed-bottom">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<nav class="navbar bg-dark navbar-dark" id="navB">
+						<nav class="navbar-center" id="foot">
+							<h5>Disclaimer</h5>
+							<p id="disclaimer">This game is created for educational-project only. Not for sale</p>
+							<h3 id="myName">Marc Vincent Reyes &copy;</h3>
+						</nav>
+					</nav>
+				</div>
+				
+			</footer>
+		</div>
 
 
-			//gameOver
-			$(".invisibleDoor3").click(function(){
-				$(".invisibleDoor2").hide();
-				$(".invisibleDoor2-1").hide();
-				$(".invisibleDoor3").hide();
-				$("#bods").css("background","none");
-				$("#bods").css("backgroundColor","black");
-				$("#videoDoor3").show();
-				$("#videoDoor3")[0].play();
-
-				function delayMe(){
-					$("#videoDoor3").hide();
-					$("#gameOver1").show();
-					$("#gameOver1")[0].play();
-
-					// $("#bods").css({
-					// 	"background":"url(assets/images/door3.jpg)",
-					// 	"background-size":"cover",
-					// 	"background-repeat":"no-repeat"});
-					// $(".invisibleDoor4").show();
-					// $(".invisibleDoor5").show();
-					// $(".invisibleDoor6").show();
-				}
-				setTimeout(delayMe, 7100);
-
-			}); //end of stage 2
 
 
-			//stage 3
-			$(".invisibleDoor4").click(function(){
-				$(".invisibleDoor4").hide();
-				$(".invisibleDoor5").hide();
-				$(".invisibleDoor6").hide();
-				$("#bods").css("background","none");
-				$("#bods").css("backgroundColor","black");
-				$("#videoDoor4").show();
-				$("#videoDoor4")[0].play();
+		<script type="text/javascript">
+			// navbar header and footer
 
-				function delayMe(){
-					$("#videoDoor4").hide();
-
-					$("#bods").css({
-						"background":"url(assets/images/wideNarrow.jpg)",
-						"background-size":"cover",
-						"background-repeat":"no-repeat"});
-					//$(".invisibleDoor4").show();
-					//$(".invisibleDoor5").show();
-				}
-				setTimeout(delayMe, 7200);
-			}); 
-
-			$(".invisibleDoor5").click(function(){
-				$(".invisibleDoor4").hide();
-				$(".invisibleDoor5").hide();
-				$(".invisibleDoor6").hide();
-				$("#bods").css("background","none");
-				$("#bods").css("backgroundColor","black");
-				$("#videoDoor5").show();
-				$("#videoDoor5")[0].play();
-
-				function delayMe(){
-					$("#videoDoor5").hide();
-
-					$("#bods").css({
-						"background":"url(assets/images/wideNarrow.jpg)",
-						"background-size":"cover",
-						"background-repeat":"no-repeat"});
-					//$(".invisibleDoor4").show();
-					//$(".invisibleDoor5").show();
-				}
-				setTimeout(delayMe, 7200);
+			$("h3").css({
+	    		"color":"white"
 			});
 
-			$(".invisibleDoor6").click(function(){
-				$(".invisibleDoor4").hide();
-				$(".invisibleDoor5").hide();
-				$(".invisibleDoor6").hide();
-				$("#bods").css("background","none");
-				$("#bods").css("backgroundColor","black");
-				$("#videoDoor6").show();
-				$("#videoDoor6")[0].play();
+			$("h5").css({
+	    		"color":"white"
+			});
 
-				function delayMe(){
-					$("#videoDoor6").hide();
 
-					$("#bods").css({
-						"background":"url(assets/images/wideNarrow.jpg)",
-						"background-size":"cover",
-						"background-repeat":"no-repeat"});
-					//$(".invisibleDoor4").show();
-					//$(".invisibleDoor5").show();
-				}
-				setTimeout(delayMe, 7200);
-			}); //end of stage 3
+			$("#disclaimer").css("color","white")
 
-		}); //end of ready function
 
-	</script>
+			// $("body").css({
+			// 	"backgroundColor":"black",
+			// })
+
+		</script>
 
 
 
+		<script type="text/javascript">
+			$("#input1").css("textAlign","center");
+			var attempts = 3;
+			function check(){
+					var x = document.getElementById("input1").value.toLowerCase();
+					
+					if(x=="footstep" || x=="footsteps") {
+						$(".invisibleDoor2-1").css( "zIndex", "20" );
+						$("#span1").html("Congratulation! your Answer is correct. Please choose the RIGHT door! I'll make it safe now");
+						$("#input1").attr("disabled", true);
+						$("#input1").css("backgroundColor", "lightgrey");
+						$("#but1").attr("disabled", true);
+					}else {
+						attempts--;
+						if(attempts==0){
+							$("#input1").attr("disabled", true);
+							$("#input1").css("backgroundColor", "lightgrey");
+							$("#but1").attr("disabled", true);
+							$("#span1").html("You have "+attempts+" chance. Please choose any door to face your end now");
+							} else {
+							
+								$("#span1").html("Opps! your answer is incorrect! You only have "+attempts+" more chance. If you lose your chance, You have no chance to survive");
+							}
+						
+						//$(".invisibleDoor2").css( "zIndex", "1" );
+						}
 
-	<script type="text/javascript">
-		
-
-		
-	</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+					}	//end of function check()
+				
 
 
 
+			$(document).ready(function () {
+
+
+
+				//element manipulation
+
+				//stage 1
+
+				$(".invisibleDoor1").click(function(){
+					$(".invisibleDoor1").hide();
+					$("#areYouReady").hide();
+					$("#instruction1").hide();
+
+					$("#bods").css("background","none");
+					$("#bods").css("backgroundColor","black");
+					$("#videoDoor1").show();
+					$("#videoDoor1")[0].play();
+
+
+					function delayMe(){
+						$("#videoDoor1").hide();
+
+						$("#bods").css({
+							"background":"url(assets/images/door2.jpg)",
+							"background-size":"cover",
+							"background-repeat":"no-repeat"});
+						$("#q1").show();
+						$(".invisibleDoor2").show();
+						$(".invisibleDoor2-1").show();
+						$(".invisibleDoor3").show();
+					}
+					setTimeout(delayMe, 6500);
+
+				}); //end of stage 1
+
+
+				//stage 2
+
+				//gameOverDoor
+				$(".invisibleDoor2").click(function(){
+					$("#q1").hide();
+					$(".invisibleDoor2").hide();
+					$(".invisibleDoor2-1").hide();
+					$(".invisibleDoor3").hide();
+					$("#bods").css("background","none");
+					$("#bods").css("backgroundColor","black");
+					$("#videoDoor2").show();
+					$("#videoDoor2")[0].play();
+
+					function delayMe(){
+						$("#videoDoor2").hide();
+						$("#gameOver1").show();
+						$("#gameOver1")[0].play();
+
+					}
+					setTimeout(delayMe, 3000);
+
+				}); 
+
+
+				//correct Door
+				$(".invisibleDoor2-1").click(function(){
+					$("#q1").hide();
+					$(".invisibleDoor2").hide();
+					$(".invisibleDoor2-1").hide();
+					$(".invisibleDoor3").hide();
+					$("#bods").css("background","none");
+					$("#bods").css("backgroundColor","black");
+					$("#videoDoor3").show();
+					$("#videoDoor3")[0].play();
+
+					function delayMe(){
+						$("#videoDoor3").hide();
+
+						$("#bods").css({
+							"background":"url(assets/images/door3.jpg)",
+							"background-size":"cover",
+							"background-repeat":"no-repeat"});
+						$(".invisibleDoor4").show();
+						$(".invisibleDoor5").show();
+						$(".invisibleDoor6").show();
+					}
+					setTimeout(delayMe, 7100);
+
+				}); 
+
+
+				//gameOverDoor
+				$(".invisibleDoor3").click(function(){
+					$("#q1").hide();
+					$(".invisibleDoor2").hide();
+					$(".invisibleDoor2-1").hide();
+					$(".invisibleDoor3").hide();
+					$("#bods").css("background","none");
+					$("#bods").css("backgroundColor","black");
+					$("#videoDoor3").show();
+					$("#videoDoor3")[0].play();
+
+					function delayMe(){
+						$("#videoDoor3").hide();
+						$("#gameOver1").show();
+						$("#gameOver1")[0].play();
+
+						// $("#bods").css({
+						// 	"background":"url(assets/images/door3.jpg)",
+						// 	"background-size":"cover",
+						// 	"background-repeat":"no-repeat"});
+						// $(".invisibleDoor4").show();
+						// $(".invisibleDoor5").show();
+						// $(".invisibleDoor6").show();
+					}
+					setTimeout(delayMe, 7100);
+
+				}); //end of stage 2
+
+
+				//stage 3
+				$(".invisibleDoor4").click(function(){
+					$(".invisibleDoor4").hide();
+					$(".invisibleDoor5").hide();
+					$(".invisibleDoor6").hide();
+					$("#bods").css("background","none");
+					$("#bods").css("backgroundColor","black");
+					$("#videoDoor4").show();
+					$("#videoDoor4")[0].play();
+
+					function delayMe(){
+						$("#videoDoor4").hide();
+
+						$("#bods").css({
+							"background":"url(assets/images/wideNarrow.jpg)",
+							"background-size":"cover",
+							"background-repeat":"no-repeat"});
+						//$(".invisibleDoor4").show();
+						//$(".invisibleDoor5").show();
+					}
+					setTimeout(delayMe, 7200);
+				}); 
+
+				$(".invisibleDoor5").click(function(){
+					$(".invisibleDoor4").hide();
+					$(".invisibleDoor5").hide();
+					$(".invisibleDoor6").hide();
+					$("#bods").css("background","none");
+					$("#bods").css("backgroundColor","black");
+					$("#videoDoor5").show();
+					$("#videoDoor5")[0].play();
+
+					function delayMe(){
+						$("#videoDoor5").hide();
+
+						$("#bods").css({
+							"background":"url(assets/images/wideNarrow.jpg)",
+							"background-size":"cover",
+							"background-repeat":"no-repeat"});
+						//$(".invisibleDoor4").show();
+						//$(".invisibleDoor5").show();
+					}
+					setTimeout(delayMe, 7200);
+				});
+
+				$(".invisibleDoor6").click(function(){
+					$(".invisibleDoor4").hide();
+					$(".invisibleDoor5").hide();
+					$(".invisibleDoor6").hide();
+					$("#bods").css("background","none");
+					$("#bods").css("backgroundColor","black");
+					$("#videoDoor6").show();
+					$("#videoDoor6")[0].play();
+
+					function delayMe(){
+						$("#videoDoor6").hide();
+
+						$("#bods").css({
+							"background":"url(assets/images/wideNarrow.jpg)",
+							"background-size":"cover",
+							"background-repeat":"no-repeat"});
+						//$(".invisibleDoor4").show();
+						//$(".invisibleDoor5").show();
+					}
+					setTimeout(delayMe, 7200);
+				}); //end of stage 3
+
+			}); //end of ready function
+
+		</script>
+
+
+
+
+		<script type="text/javascript">
+			
+
+			
+		</script>
 
 
 
@@ -419,6 +399,34 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
 
 
 	<!-- external custom js -->

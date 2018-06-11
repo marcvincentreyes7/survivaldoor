@@ -2,6 +2,9 @@
 
 }
 
+.portraitMsg{
+    display: none;
+}
 
 .navbar-center {
     position: absolute;
@@ -74,7 +77,7 @@
     margin-top: 17%;
     margin-left: 25%;
     display: none;
-    z-index: 5;
+    z-index: 10;
 }
 
 
@@ -84,9 +87,9 @@
     /*background-color: blue;*/
     position: absolute;
     margin-top: 17%;
-    margin-left: 25%;
+    margin-left: 60%;
     display: none;
-    z-index: 10;
+    z-index: 1;
 }
 
 
@@ -108,6 +111,7 @@
     position: absolute;
     margin-top: 17%;
     margin-left: 60%;
+    z-index: 10;
     /*display: none;*/
 }
 
@@ -215,8 +219,73 @@
     font-size: 25px;
     text-align: center;
     padding: 5px;
+    display: none;
 }
 
-#span1{
 
+
+
+
+
+/*@media (min-width: 220px) and (max-width: 450px) {
+    #solarsystem {
+        display: none;
+    }
+*/
+
+/* Portrait */
+@media screen and (device-width: 360px) {
+  /*or (device-height: 640px) */
+  /*and (-webkit-device-pixel-ratio: 4) */
+  /*and (orientation: portrait) {*/
+
+    section {
+        display: none;
+    }
+
+    #bods{
+        background: url(../images/noSignal.gif) no-repeat center fixed;
+        background-size: cover;
+        text-align: center;
+    }
+
+    #portraitMsg{
+        position: absolute;
+        display: block;
+        font-size: 60px;
+        color: white;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+
+
+
+
+@media screen and (device-width: 320px) {
+  /*or (device-height: 640px) */
+  /*and (-webkit-device-pixel-ratio: 4) */
+  /*and (orientation: portrait) {*/
+
+    section {
+        display: none;
+    }
+
+    #bods{
+        background: url(../images/noSignal.gif) no-repeat center fixed;
+        background-size: cover;
+        text-align: center;
+    }
+
+    #portraitMsg{
+        position: absolute;
+        display: block;
+        font-size: 60px;
+        color: white;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
